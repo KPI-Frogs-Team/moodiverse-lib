@@ -1,0 +1,21 @@
+name: Unit Tests
+
+on:
+  push:
+    branches:
+      - main
+      - development
+  pull_request:
+    branches: [main, development]
+
+jobs:
+  Jest:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+        with:
+          _authToken: ${{ secrets.AUTH_TOKEN_LIB }}
+      - name: Run Tests
+        run: |
+          yarn install 
+          yarn test
