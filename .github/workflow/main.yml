@@ -1,21 +1,15 @@
-name: Unit Tests
+name: Tests CI
 
-on:
-  push:
-    branches:
-      - main
-      - development
-  pull_request:
-    branches: [main, development]
+on: [push, pull_request]
 
 jobs:
-  Jest:
+  test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v2
+      - name: Test using Node.js
+        uses: actions/setup-node@v1
         with:
-          _authToken: ${{ secrets.AUTH_TOKEN_LIB }}
-      - name: Run Tests
-        run: |
-          yarn install 
-          yarn test
+          node-version: '12'
+      - run: yarn install
+      - run: yarn test
