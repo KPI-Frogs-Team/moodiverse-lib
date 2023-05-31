@@ -48,14 +48,14 @@ To run tests, run the following command
 ```
 
 
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
-
-
 ## Related
 
-This library **only** related to Moodiverse project and can be used in this project.
+This library **only** related to Moodiverse project.
 
 [Moodiverse Front-end Repository ](https://github.com/moodie-team/moodiverse-front)
 
+
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
